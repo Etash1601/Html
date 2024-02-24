@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML_3</title>
+</head>
+<body>
+    <table border="black">
+        <caption>Food Menu</caption>
+        <!--Table Head-->
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <!--Table Body-->
+        <tbody>
+            <tr>
+                <td>Fruti</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Samosa</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Chips</td>
+                <td>12</td>
+            </tr>
+        </tbody>
+        <!--Table Foot-->
+        <tfoot></tfoot> <!--used when there is sum/total/average row-->
+    </table>
+    
+    <table border="black">
+        <caption>Food Menu</caption>
+        <!--Table Head-->
+        <thead>
+            <tr>
+                <th rowspan="2">Item</th>
+                <th colspan="2">Price</th>
+            </tr>
+            <tr>
+                <th >INR</th>
+                <th >USD</th>
+            </tr>
+        </thead>
+        <!--Table Body-->
+        <tbody>
+            <tr>
+                <td>Fruti</td>
+                <td>20</td>
+                <td>0.14</td>
+            </tr>
+            <tr>
+                <td>Samosa</td>
+                <td>10</td>
+                <td>0.16</td>
+            </tr>
+            <tr>
+                <td>Chips</td>
+                <td>12</td>
+                <td>.010</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table border="black">
+        <caption>A test table with merged cells</caption>
+        <tbody>
+            <tr>
+                <td rowspan="2"></td>
+                <td colspan="2">Average</td>
+                <td rowspan="2">Red Eyes</td>
+            </tr>
+            <tr>
+                <td>Height</td>
+                <td>Weight</td>
+            </tr>
+            <tr>
+                <td>Males</td>
+                <td>1.9</td>
+                <td>0.005</td>
+                <td>40%</td>
+            </tr>
+            <tr>
+                <td>Females</td>
+                <td>1.7</td>
+                <td>0.002</td>
+                <td>43%</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+
+    <!--Forms-->
+    <form action="/action">
+        <label>
+            Username:
+            <input type="text" placeholder="Enter name"><br>
+        </label>
+        <input type="password" placeholder="Enter password"><br>
+        <input type="number" placeholder="Enter number"><br>
+        <input type="time"><br>
+        <input type="date"><br>
+        <!--ID in labelling-->
+        <label for="username">Username:</label>
+        <input type="text" placeholder="Enter name" id="username">
+        <label for="password">Password:</label>
+        <input type="password" placeholder="Enter password" id="password">
+        <br>
+        <!--Buttons-->
+        <button type="submit">Submit</button>
+        <input type="submit" value="Click me">
+        <br>
+
+        <!--Name-->
+        <label for="username">Username:</label>
+        <input type="text" placeholder="Enter name" id="username" name="username">
+        <label for="password">Password:</label>
+        <input type="password" placeholder="Enter password" id="password" name="password">
+        <br><hr>
+    </form>
+        
+    <form action="https://www.youtube.com/results?">
+        <input type="text" placeholder="search in youtube" name="search_query">
+        <button>Submit</button>
+        <br>
+    </form>
+
+    <!--Checkbox-->
+    <form action="/server">
+        <input type="checkbox" id="age" name="age" checked>
+        <!--by removing "checked" by default tick will be removed-->
+        <label for="age"> I am 18 +</label>
+    </form>
+
+    <!--Radio-->
+    <form action="/server">
+        <input type="radio" id="apple" name="fruit" value="apple">
+        <label for="apple">Apple</label>
+        <input type="radio" id="mango" name="fruit" value="mango">
+        <label for="mango">Mango</label>
+        <input type="radio" id="orange" name="fruit" value="orange">
+        <label for="orange">Orange</label>
+        <!--since all options are grouped to same name="fruit", we can only
+        choose one option-->
+        <!--value attribute shows which fruit is chosen in the url-->
+        <br>
+        <button>Submit</button>
+    </form>
+
+    <!--Select-->
+    <form action="/server">
+        Choose your profession:
+        <select name="profession" id="profession">
+            <option>select your option</option>
+            <option value="student" selected>Student</option>
+            <!--by removing "selected" by default Student will be removed-->
+            <option value="developer">Developer</option>
+        </select>
+        <button>Submit</button>
+        <br>
+    </form>
+
+    <!--Range-->
+    <form action="/server">
+        <label for="volume">Volume level:</label>
+        <input type="range" id="volume" min="0" max="100" name="volume" 
+        step="10" value="70">
+        <button>Submit</button>
+        <br>
+    </form>
+
+    <!--Text Area-->
+    <form action="/server">
+        <label for="feedback">Please give feedback</label>
+        <textarea id="feedback" name="feedback"></textarea>
+        <br>
+        <!--Default limit is 2-row and 10-columns-->
+        <label for="feedback">Please give feedback</label>
+        <textarea id="feedback" name="feedback" placeholder="write feedback"
+        rows="5" cols="100"></textarea>
+        <button>Submit</button>
+        <br>
+    </form>
+    <hr>
+
+    <!--Practice-->
+    <form action="/server">
+        <h2>Registration Form</h2><br>
+        <label for="fname"></label>
+        <input type="text" placeholder="First name" id="fname" name="fname">
+        <label for="lname"></label>
+        <input type="text" placeholder="Last name" id="lname" name="lname">
+        <br>
+        <label for="gender">Please select gender:</label>
+        <select name="gender" id="gender">
+            <option>select your option</option>
+            <option value="male" selected>Male</option>
+            <option value="female">Female</option>
+            <option value="others">Others</option>
+        </select>
+        <br>
+        Do you agree to all the terms of service?
+        <input type="checkbox" id="agree" name="agree" checked>
+        <label for="agree"> Yes, I agree</label>
+        <br>
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
