@@ -1,0 +1,28 @@
+h1
+{
+    text-align: right;
+    font-weight: 100;
+    text-decoration: red wavy underline;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-family: arial;
+    width: 50%; 
+    color: red;
+    background-color: white;
+}
+
+h2
+{
+    text-align: left;
+    line-height: 2.5;
+    text-decoration: black double underline;
+    width: 100%;
+    border: solid; 
+    color: red;
+    background-color: white;
+}
+
+a
+{
+    text-decoration: none;
+}
